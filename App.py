@@ -38,7 +38,7 @@ if uploaded_file is not None:
             st.error("Uploaded file must contain at least 100 columns.")
         else:
             # Use only the first 100 columns if there are more
-            X_test = test_data.iloc[:, :100]
+            X_test = test_data.iloc[:, :91]
 
             # First, use XGBoost to predict if the ECG is abnormal
             if st.button("Predict"):
