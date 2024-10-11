@@ -9,9 +9,9 @@ def load_models():
     with zipfile.ZipFile('/mount/src/ecg-classifier-xgboost/Models.zip', 'r') as zip_ref:
         zip_ref.extractall()
 
-    with open("/mount/src/ecg-classifier-xgboost/binary_model.pkl", "rb") as f:
+    with open("Binary_model.pkl", "rb") as f:
         binary_model = pickle.load(f)
-    with open("/mount/src/ecg-classifier-xgboost/multi_model.pkl", "rb") as f:
+    with open("Multi_model.pkl", "rb") as f:
         multi_model = pickle.load(f)
 
     return binary_model ,multi_model 
