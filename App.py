@@ -46,7 +46,7 @@ if uploaded_file is not None:
                 results_placeholder.empty()
 
                 # Predict using XGBoost
-                binary_pred = binary.predict(X_test)
+                binary_pred = binary_model.predict(X_test)
                 results_data = []
 
                 # Loop through each prediction and collect the result
